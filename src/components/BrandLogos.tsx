@@ -1,97 +1,43 @@
 import React from 'react';
+import faviconImg from '../assets/favicon.png';
 
 /**
- * High-Definition 3D MaxWell Origami Butterfly Vector Mark (Matching Screenshot 2 1:1)
- * Features soft lavender outer paper wings, rich 3D mountain-fold inner shadow, and crisp vector resolution.
+ * Official MaxWell Favicon Mark
+ * Rendered using the root favicon.png image asset imported into Vite.
  */
 export const OrigamiMark: React.FC<{ size?: number; className?: string }> = ({
   size = 32,
   className = ""
 }) => {
   return (
-    <div className={`relative inline-flex items-center justify-center ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
-      <svg
-        width={size}
-        height={size}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full drop-shadow-sm transition-transform duration-200 hover:scale-105"
-      >
-        <defs>
-          <linearGradient id="leftWingGrad" x1="15" y1="23" x2="45" y2="70" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#FAF7FF" />
-            <stop offset="50%" stopColor="#E8DCFF" />
-            <stop offset="100%" stopColor="#D4C2FF" />
-          </linearGradient>
-
-          <linearGradient id="rightWingGrad" x1="85" y1="23" x2="55" y2="70" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#F5EEFF" />
-            <stop offset="50%" stopColor="#DFCEFF" />
-            <stop offset="100%" stopColor="#C9B4FF" />
-          </linearGradient>
-
-          <linearGradient id="innerLeftGrad" x1="50" y1="44" x2="34" y2="76" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#9B7EFF" />
-            <stop offset="60%" stopColor="#7A56F0" />
-            <stop offset="100%" stopColor="#603ED8" />
-          </linearGradient>
-
-          <linearGradient id="innerRightGrad" x1="50" y1="44" x2="66" y2="76" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#8868FF" />
-            <stop offset="60%" stopColor="#6C4FE0" />
-            <stop offset="100%" stopColor="#5232C7" />
-          </linearGradient>
-
-          <filter id="foldShadowFilter" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#4A2BB8" floodOpacity="0.3" />
-          </filter>
-        </defs>
-
-        <g filter="url(#foldShadowFilter)">
-          {/* Outer Left Wing */}
-          <path d="M 15 23 L 50 44 L 34 76 Z" fill="url(#leftWingGrad)" stroke="#C8B6FF" strokeWidth="0.75" strokeLinejoin="round" />
-          
-          {/* Outer Right Wing */}
-          <path d="M 85 23 L 50 44 L 66 76 Z" fill="url(#rightWingGrad)" stroke="#C4B0FF" strokeWidth="0.75" strokeLinejoin="round" />
-
-          {/* Inner Left Mountain Fold */}
-          <path d="M 50 44 L 34 76 L 50 59 Z" fill="url(#innerLeftGrad)" stroke="#5B39D4" strokeWidth="0.5" strokeLinejoin="round" />
-
-          {/* Inner Right Mountain Fold */}
-          <path d="M 50 44 L 66 76 L 50 59 Z" fill="url(#innerRightGrad)" stroke="#4F2DC6" strokeWidth="0.5" strokeLinejoin="round" />
-
-          {/* Center Crease Highlight Line */}
-          <line x1="50" y1="44" x2="50" y2="59" stroke="#FFFFFF" strokeWidth="1" strokeLinecap="round" opacity="0.9" />
-        </g>
-      </svg>
-    </div>
+    <img
+      src={faviconImg}
+      alt="MaxWell Logo Mark"
+      width={size}
+      height={size}
+      className={`object-contain transition-transform duration-200 hover:scale-105 ${className}`}
+      style={{ width: `${size}px`, height: `${size}px` }}
+    />
   );
 };
 
 /**
- * Monochrome White Mark for Dark Surfaces
+ * White/Inverted Mark for Dark Surfaces
  */
 export const OrigamiMarkWhite: React.FC<{ size?: number; className?: string }> = ({
   size = 32,
   className = ""
 }) => {
   return (
-    <div className={`relative inline-flex items-center justify-center ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
-      <svg
+    <div className={`relative inline-block ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
+      <img
+        src={faviconImg}
+        alt="MaxWell Logo Mark White"
         width={size}
         height={size}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full filter drop-shadow(0 2px 4px rgba(255,255,255,0.25))"
-      >
-        <path d="M 15 23 L 50 44 L 34 76 Z" fill="#FFFFFF" fillOpacity="0.95" />
-        <path d="M 85 23 L 50 44 L 66 76 Z" fill="#FFFFFF" fillOpacity="1" />
-        <path d="M 50 44 L 34 76 L 50 59 Z" fill="#FFFFFF" fillOpacity="0.8" />
-        <path d="M 50 44 L 66 76 L 50 59 Z" fill="#FFFFFF" fillOpacity="0.85" />
-        <line x1="50" y1="44" x2="50" y2="59" stroke="#1A1A1A" strokeWidth="1" opacity="0.4" />
-      </svg>
+        className="object-contain brightness-125 filter drop-shadow(0 2px 4px rgba(255,255,255,0.2))"
+        style={{ width: `${size}px`, height: `${size}px` }}
+      />
     </div>
   );
 };
