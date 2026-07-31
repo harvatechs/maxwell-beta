@@ -1,9 +1,9 @@
-# MaxWell — Scientific Publishing, Reimagined
+# MaxWell: Scientific Publishing, Reimagined
 ### *Where publishing research is as simple, fast, and satisfying as deploying a website.*
-**— Powered by HarVa —**
+**Powered by HarVa**
 
 [![License: CC-BY-4.0](https://img.shields.io/badge/License-CC--BY--4.0-6C4FE0.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Architecture: GitHub--Native](https://img.shields.io/badge/Architecture-GitHub--Native-1A1A1A.svg)](https://github.com/harvatechs/maxwell-beta)
+[![Architecture: GitHub-Native](https://img.shields.io/badge/Architecture-GitHub--Native-1A1A1A.svg)](https://github.com/harvatechs/maxwell-beta)
 [![Build Status](https://img.shields.io/badge/Build-Passing-4ECDC4.svg)](https://github.com/harvatechs/maxwell-beta/actions)
 [![Deploy: GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-6C4FE0.svg)](https://harvatechs.github.io/maxwell-beta/)
 
@@ -11,25 +11,25 @@
 
 ## 1. Executive Summary
 
-Where **Vercel** took website deployment — historically slow, bureaucratic, gatekept by ops teams — and turned it into a simple `git push`, **MaxWell** takes research publishing — historically slow, bureaucratic, gatekept by journals — and turns it into a `git push`.
+Where **Vercel** took website deployment (historically slow, bureaucratic, gatekept by ops teams) and turned it into a simple `git push`, **MaxWell** takes research publishing (historically slow, bureaucratic, gatekept by journals) and turns it into a `git push`.
 
-Inspired by James Clerk Maxwell's unification of electricity, magnetism, and light into a single set of equations, MaxWell unifies **writing**, **peer review**, **version control**, and **community discussion** into one elegant platform — built entirely on **GitHub as the backend**.
+Inspired by James Clerk Maxwell's unification of electricity, magnetism, and light into a single set of equations, MaxWell unifies **writing**, **peer review**, **version control**, and **community discussion** into one elegant platform built entirely on **GitHub as the backend**.
 
 ---
 
 ## 2. The Philosophical Core
 
 1. **Unification over Fragmentation**:
-   Writing, reviewing, versioning, and discussing research are not four separate tools wearing one skin — they are one continuous act. When a paper is published on MaxWell, its text, raw data, computational figures, and review lineage inhabit the exact same object: a public, version-controlled repository in the author’s own GitHub account.
+   Writing, reviewing, versioning, and discussing research are not four separate tools wearing one skin; they are one continuous act. When a paper is published on MaxWell, its text, raw data, computational figures, and review lineage inhabit the exact same object: a public, version-controlled repository in the author’s own GitHub account.
 
 2. **Openness as a Scientific Value**:
-   Verifiability is the core commitment of both open-source software and open science. A result you cannot inspect is not a result you can trust. A `git blame` on a dataset and a peer review thread on an equation serve the exact same master — transparency of provenance.
+   Verifiability is the core commitment of both open-source software and open science. A result you cannot inspect is not a result you can trust. A `git blame` on a dataset and a peer review thread on an equation serve the exact same master: transparency of provenance.
 
 3. **Minimalism as Respect for Time**:
    Every layer of process that doesn’t serve rigor is a tax on discovery. MaxWell rejects hype adjectives ("revolutionary", "game-changing") in favor of plain, exact, understated precision.
 
 4. **Zero Proprietary Database Lock-in**:
-   Every paper lives in **the author’s own GitHub repo** (`github.com/{username}/maxwell-papers`). MaxWell renders and indexes content — authors own their work forever under open licensing (default CC-BY-4.0).
+   Every paper lives in **the author’s own GitHub repo** (`github.com/{username}/maxwell-papers`). MaxWell renders and indexes content while authors own their work forever under open licensing (default CC-BY-4.0).
 
 ---
 
@@ -42,16 +42,16 @@ Inspired by James Clerk Maxwell's unification of electricity, magnetism, and lig
  PDF preprints.            expert verification.       and release tags.          repositories.
 ```
 
-1. **Write — GitHub-Powered Publishing**:
+1. **Write (GitHub-Powered Publishing)**:
    Authors write in clean Markdown with live MathJax rendering or upload preprints. On submission, MaxWell commits the manuscript directly to a public repository in the author’s own GitHub account.
 
-2. **Review — Open Peer Review Protocol**:
+2. **Review (Open Peer Review Protocol)**:
    Peer review threads live as structured GitHub Issues in `maxwell-hq/reviews`. Vetted domain experts evaluate claims, discuss revisions, and issue verified status badges (`status:community-verified`) reflected live on the public paper.
 
-3. **Version — Version Control Lineage**:
+3. **Version (Version Control Lineage)**:
    Revisions, errata, and updated figures are pushed as commits. Readers can inspect exact line-by-line diffs across paper versions, ensuring complete historical integrity.
 
-4. **Discuss — Community Idea Layer**:
+4. **Discuss (Community Idea Layer)**:
    Community members sign in with GitHub to annotate equations, ask clarification questions, or cite follow-up work directly alongside author-owned repositories.
 
 ---
@@ -63,7 +63,7 @@ MaxWell uses an **Apple-Zen Minimalist aesthetic** with a **tactile origami pape
 ### Color Palette Tokens
 | Token | Hex | Role |
 |---|---|---|
-| `Primary Purple` | `#6C4FE0` | Primary brand color — CTAs, logo, key accents |
+| `Primary Purple` | `#6C4FE0` | Primary brand color (CTAs, logo, key accents) |
 | `Deep Black` | `#1A1A1A` | Primary headlines, dark surface background |
 | `Charcoal` | `#4A4A4A` | Secondary & body text |
 | `Light Gray` | `#E5E5E5` | Borders, subtle section backgrounds, dividers |
@@ -73,7 +73,7 @@ MaxWell uses an **Apple-Zen Minimalist aesthetic** with a **tactile origami pape
 ### Signature Origami Motifs
 - **`<CornerFold />`** (`.corner-fold-container`): A tactile 3D folded paper corner flap with drop shadows (`box-shadow: -4px 4px 8px rgba(0,0,0,0.15)`) applied to cards.
 - **`<CreaseLine />`** (`.crease-line`): A subtle 1px angled crease line with a centered 45° diamond divider separating sections.
-- **`<FoldIn />`** (`.fold-in`): A 350ms 3D unfolding entrance keyframe animation (`rotateX(-8deg) translateY(12px) → rotateX(0deg)`).
+- **`<FoldIn />`** (`.fold-in`): A 350ms 3D unfolding entrance keyframe animation (`rotateX(-8deg) translateY(12px) -> rotateX(0deg)`).
 - **3D Page Flip** (`.animate-page-flip`): A 480ms 3D paper page turn transition (`perspective: 1200px`) used in tabbed preview components.
 
 ---
@@ -86,7 +86,7 @@ MaxWell uses an **Apple-Zen Minimalist aesthetic** with a **tactile origami pape
 - **Iconography**: Lucide React + Official 3D MaxWell Origami Butterfly Vector Mark
 - **Fonts**: Google Fonts (`Inter` for UI, `Fraunces` for serif pull-quotes, `JetBrains Mono` for code/math)
 - **Forms & Integration**: Async Google Sheets Webhook Dispatcher + LocalStorage Cache
-- **CI/CD & Hosting**: GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages
+- **CI/CD & Hosting**: GitHub Actions (`.github/workflows/deploy.yml`) -> GitHub Pages
 
 ### Repository Layout
 ```
@@ -159,7 +159,7 @@ Form submissions (Waitlist email requests and Founding Expert applications) auto
 
 ### Apps Script Deployment (15-Line Snippet)
 
-In your Google Sheet, navigate to **Extensions → Apps Script** and paste:
+In your Google Sheet, navigate to **Extensions -> Apps Script** and paste:
 
 ```javascript
 function doPost(e) {
@@ -192,10 +192,10 @@ VITE_GOOGLE_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/AKfycbwlmjoBVb
 
 ## 8. Master Build Playbook Roadmap Overview
 
-According to `MaxWell-Build-Playbook.md`, the full platform is scheduled across 9 execution phases (~13–15 weeks to public launch):
+According to `MaxWell-Build-Playbook.md`, the full platform is scheduled across 9 execution phases (approximately 13 to 15 weeks to public launch):
 
 ```
-Phase 0 ──► Phase 1 ──► Phase 2 ──► Phase 3 ──► Phase 4 ──► Phase 5 ──► Phase 6 ──► Phase 7 ──► Phase 8
+Phase 0 ---> Phase 1 ---> Phase 2 ---> Phase 3 ---> Phase 4 ---> Phase 5 ---> Phase 6 ---> Phase 7 ---> Phase 8
 Brand &     Infra &     Core Auth   Feature     Design      Policy      Expert      QA &        Public
 Design      GitHub      & Octokit   Build       System      Sprint      Cohort      Security    Launch
 Foundation  App Setup   Client      (Wizard)    Tokens      Docs        Recruit     Audit       Event
@@ -211,7 +211,7 @@ Foundation  App Setup   Client      (Wizard)    Tokens      Docs        Recruit 
 | **Phase 5** | Content & Policy Sprint | Copyright, licensing, review standards, code of conduct |
 | **Phase 6** | Founding Expert Recruitment | Onboard inaugural cohort of 50 vetted peer reviewers |
 | **Phase 7** | QA & Security Audit | GitHub App permission audit, WCAG AA accessibility, Lighthouse ≥ 95 |
-| **Phase 8** | Launch (Soft → Public) | Invite-only soft launch followed by public announcement |
+| **Phase 8** | Launch (Soft -> Public) | Invite-only soft launch followed by public announcement |
 | **Phase 9** | Post-Launch Operations | Expert onboarding runbooks, moderation triage, search index maintenance |
 
 ---
