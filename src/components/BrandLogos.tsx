@@ -1,8 +1,9 @@
 import React from 'react';
+import faviconImg from '../assets/favicon.png';
 
 /**
  * Official 3D Origami Butterfly Logo Mark
- * Rendered using the high-resolution official brand asset.
+ * Rendered using imported asset to guarantee path resolution on GitHub Pages & local dev.
  */
 export const OrigamiMark: React.FC<{ size?: number; className?: string }> = ({
   size = 32,
@@ -10,7 +11,7 @@ export const OrigamiMark: React.FC<{ size?: number; className?: string }> = ({
 }) => {
   return (
     <img
-      src="/favicon.png"
+      src={faviconImg}
       alt="MaxWell Origami Butterfly Logo Mark"
       width={size}
       height={size}
@@ -30,7 +31,7 @@ export const OrigamiMarkWhite: React.FC<{ size?: number; className?: string }> =
   return (
     <div className={`relative inline-block ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
       <img
-        src="/favicon.png"
+        src={faviconImg}
         alt="MaxWell Origami Butterfly Logo Mark White"
         width={size}
         height={size}
