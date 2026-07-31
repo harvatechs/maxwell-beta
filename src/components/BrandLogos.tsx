@@ -1,23 +1,65 @@
 import React from 'react';
-import faviconImg from '../assets/favicon.png';
 
 /**
- * Official 3D Origami Butterfly Logo Mark
- * Rendered using imported asset to guarantee path resolution on GitHub Pages & local dev.
+ * High-Definition 3D MaxWell Origami Butterfly Vector Mark
+ * Renders instantly with crisp 3D paper facets & gradients.
  */
 export const OrigamiMark: React.FC<{ size?: number; className?: string }> = ({
   size = 32,
   className = ""
 }) => {
   return (
-    <img
-      src={faviconImg}
-      alt="MaxWell Origami Butterfly Logo Mark"
-      width={size}
-      height={size}
-      className={`object-contain transition-transform duration-200 hover:scale-105 ${className}`}
-      style={{ width: `${size}px`, height: `${size}px` }}
-    />
+    <div className={`relative inline-flex items-center justify-center ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
+      {/* High-Definition 3D Vector SVG Mark */}
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full drop-shadow-sm transition-transform duration-200 hover:scale-105"
+      >
+        <defs>
+          {/* Gradients for 3D Origami Facets */}
+          <linearGradient id="leftWingOuter" x1="15" y1="20" x2="50" y2="85" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#ECE6FF" />
+            <stop offset="60%" stopColor="#9E81FF" />
+            <stop offset="100%" stopColor="#6C4FE0" />
+          </linearGradient>
+          
+          <linearGradient id="leftWingInner" x1="50" y1="48" x2="15" y2="20" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#583CBD" />
+            <stop offset="100%" stopColor="#7E60FE" />
+          </linearGradient>
+
+          <linearGradient id="rightWingOuter" x1="85" y1="20" x2="50" y2="85" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#F5F0FF" />
+            <stop offset="50%" stopColor="#B29CFF" />
+            <stop offset="100%" stopColor="#6C4FE0" />
+          </linearGradient>
+
+          <linearGradient id="rightWingInner" x1="50" y1="48" x2="85" y2="20" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#482CA6" />
+            <stop offset="100%" stopColor="#6C4FE0" />
+          </linearGradient>
+        </defs>
+
+        {/* Outer Left Wing */}
+        <polygon points="50,85 15,20 35,70" fill="url(#leftWingOuter)" />
+        
+        {/* Inner Left Fold Facet */}
+        <polygon points="50,85 15,20 50,48" fill="url(#leftWingInner)" />
+
+        {/* Outer Right Wing */}
+        <polygon points="50,85 85,20 65,70" fill="url(#rightWingOuter)" />
+
+        {/* Inner Right Fold Facet */}
+        <polygon points="50,85 85,20 50,48" fill="url(#rightWingInner)" />
+
+        {/* Center Paper Crease Highlight Line */}
+        <line x1="50" y1="48" x2="50" y2="85" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.85" strokeLinecap="round" />
+      </svg>
+    </div>
   );
 };
 
@@ -29,15 +71,21 @@ export const OrigamiMarkWhite: React.FC<{ size?: number; className?: string }> =
   className = ""
 }) => {
   return (
-    <div className={`relative inline-block ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
-      <img
-        src={faviconImg}
-        alt="MaxWell Origami Butterfly Logo Mark White"
+    <div className={`relative inline-flex items-center justify-center ${className}`} style={{ width: `${size}px`, height: `${size}px` }}>
+      <svg
         width={size}
         height={size}
-        className="object-contain brightness-200 contrast-125 filter drop-shadow(0 2px 4px rgba(255,255,255,0.2))"
-        style={{ width: `${size}px`, height: `${size}px` }}
-      />
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full filter drop-shadow(0 2px 4px rgba(255,255,255,0.25))"
+      >
+        <polygon points="50,85 15,20 35,70" fill="#FFFFFF" fillOpacity="0.95" />
+        <polygon points="50,85 15,20 50,48" fill="#FFFFFF" fillOpacity="0.75" />
+        <polygon points="50,85 85,20 65,70" fill="#FFFFFF" fillOpacity="1" />
+        <polygon points="50,85 85,20 50,48" fill="#FFFFFF" fillOpacity="0.8" />
+        <line x1="50" y1="48" x2="50" y2="85" stroke="#1A1A1A" strokeWidth="1.5" opacity="0.5" />
+      </svg>
     </div>
   );
 };
